@@ -15,6 +15,7 @@ TagManager:
   - Panel
   - LeftHand
   - RightHand
+  - Character_Model
   layers:
   - Default
   - TransparentFX

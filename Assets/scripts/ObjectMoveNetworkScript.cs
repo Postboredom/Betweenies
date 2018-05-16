@@ -33,6 +33,15 @@ public class ObjectMoveNetworkScript : NetworkBehaviour {
         CmdGrab(battery);
     }
 
+    void Walking(GameObject character)
+    {
+        CmdWalk(character);
+    }
+
+    void Pushing(GameObject character)
+    {
+        CmdPushPull(character);
+    }
     void OpenDoor(GameObject door)
     {
         CmdDoor(door);
@@ -103,6 +112,7 @@ public class ObjectMoveNetworkScript : NetworkBehaviour {
     {
         enabler.SetActive(true);
     }
+    [Command]
     void CmdEnablecol(GameObject enabler)
     {
         enabler.GetComponent<BoxCollider>().enabled = true;
@@ -111,5 +121,15 @@ public class ObjectMoveNetworkScript : NetworkBehaviour {
     void CmdAnimate(GameObject animator)
     {
         animator.GetComponent<Animator>().SetBool("open", true);
-            }
+    }
+    [Command]
+    void CmdWalk(GameObject character)
+    {
+        character.GetComponent<Animator>().SetBool("iswalking", true);
+    }
+    [Command]
+    void CmdPushPull(GameObject character)
+    {
+        character.transform.Find("HumanCharacterModel_painted").gameObject.GetComponent<Animator>().SetBool("ispushing", true);
+    }
 }

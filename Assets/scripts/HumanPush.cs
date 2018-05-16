@@ -32,7 +32,8 @@ public class HumanPush : MonoBehaviour {
         if (isPushed)
         {
             Debug.Log("Sending push message");
-          human.SendMessage("pushBox", gameObject); 
+          human.SendMessage("pushBox", gameObject);
+          human.SendMessage("Pushing", human);
         }
         else
         {

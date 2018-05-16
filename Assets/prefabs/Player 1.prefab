@@ -50,9 +50,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4414159498620484}
   - component: {fileID: 95132924819458358}
+  - component: {fileID: 114645551019890320}
+  - component: {fileID: 114943370161856680}
+  - component: {fileID: 114596086917549052}
   m_Layer: 0
   m_Name: LittleDog
-  m_TagString: Untagged
+  m_TagString: Character_Model
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -887,9 +890,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4554026688174878}
   - component: {fileID: 95691748220667042}
+  - component: {fileID: 114674188862643112}
+  - component: {fileID: 114666924899700348}
   m_Layer: 0
   m_Name: HumanCharacterModel_painted
-  m_TagString: Untagged
+  m_TagString: Character_Model
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1192,7 +1197,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1583692924495698}
   m_LocalRotation: {x: -0, y: 0.9986847, z: -0, w: -0.051273357}
-  m_LocalPosition: {x: 1.1088681, y: 0.694, z: -0.70423687}
+  m_LocalPosition: {x: 11.953501, y: 3.9534824, z: 16.88393}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4554026688174878}
@@ -1889,7 +1894,7 @@ Animator:
   m_GameObject: {fileID: 1932952032046200}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 962bb3452703db1409eb43a108c2c988, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 811e45379b5bd7840894e31443b7d477, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1980,6 +1985,49 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
+--- !u!114 &114596086917549052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1025468738381160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114645551019890320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1025468738381160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 19
+    i1: 145
+    i2: 6
+    i3: 115
+    i4: 199
+    i5: 232
+    i6: 100
+    i7: 4
+    i8: 200
+    i9: 104
+    i10: 103
+    i11: 77
+    i12: 174
+    i13: 44
+    i14: 44
+    i15: 112
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114658596676363304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1993,6 +2041,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toDisable:
   - {fileID: 0}
+--- !u!114 &114666924899700348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1932952032046200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1590678366, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Animator: {fileID: 95691748220667042}
+  m_ParameterSendBits: 0
+  param0: 
+  param1: 
+  param2: 
+  param3: 
+  param4: 
+  param5: 
+--- !u!114 &114674188862643112
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1932952032046200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 19
+    i1: 145
+    i2: 6
+    i3: 115
+    i4: 199
+    i5: 232
+    i6: 100
+    i7: 4
+    i8: 200
+    i9: 104
+    i10: 103
+    i11: 77
+    i12: 174
+    i13: 44
+    i14: 44
+    i15: 112
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114921814142654896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2005,6 +2104,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   batteryHoldPlace: {fileID: 1344069229355940}
+--- !u!114 &114943370161856680
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1025468738381160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1590678366, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Animator: {fileID: 95132924819458358}
+  m_ParameterSendBits: 0
+  param0: 
+  param1: 
+  param2: 
+  param3: 
+  param4: 
+  param5: 
 --- !u!136 &136333605262200708
 CapsuleCollider:
   m_ObjectHideFlags: 1
