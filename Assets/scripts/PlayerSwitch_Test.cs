@@ -8,7 +8,7 @@ public class PlayerSwitch_Test : NetworkBehaviour {
     private GameObject simplePlayerModel;
     public GameObject dogModel;
     public GameObject humanModel;
-    //private bool isHuman;
+    private bool isHuman;
     public GameObject controller;
 
 	// Use this for initialization
@@ -18,8 +18,9 @@ public class PlayerSwitch_Test : NetworkBehaviour {
             controller = GameObject.FindGameObjectWithTag("GameController");
         }
         //isHuman = (isServer && isLocalPlayer);
+        isHuman = false;
         //simplePlayerModel = gameObject.transform.GetChild(1).gameObject;
-        if (isServer && isLocalPlayer)
+        if (isHuman && isLocalPlayer)
         {
             //Server host player is always the human
             gameObject.tag = "Human_Player";
@@ -36,7 +37,7 @@ public class PlayerSwitch_Test : NetworkBehaviour {
             //Camera cam = gameObject.GetComponentInChildren<Camera>();
             //cam.transform.position = new Vector3(cam.transform.position.x, cam.transform.position.y + 1, cam.transform.position.z);
         }
-        else if (!isServer && isLocalPlayer)
+        else if (!isHuman && isLocalPlayer)
         {
             humanModel.active = false;
             dogModel.active = false;
@@ -47,7 +48,7 @@ public class PlayerSwitch_Test : NetworkBehaviour {
             //Renderer mat = simplePlayerModel.GetComponent<Renderer>();
             //mat.material = dogMat;
         }
-        if (isServer && !isLocalPlayer)
+        if (isHuman && !isLocalPlayer)
         {
             gameObject.tag = "Dog_Player";
             Debug.Log("I am dog");
@@ -56,7 +57,7 @@ public class PlayerSwitch_Test : NetworkBehaviour {
             //mat.material = dogMat;
 
         }
-        else if (!isServer && !isLocalPlayer)
+        else if (!isHuman && !isLocalPlayer)
         {
             dogModel.active = false;
             gameObject.tag = "Human_Player";

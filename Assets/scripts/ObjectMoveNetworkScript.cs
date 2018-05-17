@@ -38,10 +38,16 @@ public class ObjectMoveNetworkScript : NetworkBehaviour {
         CmdWalk(character);
     }
 
+    void StopWalk(GameObject character)
+    {
+        CmdStopWalk(character);
+    }
+
     void Pushing(GameObject character)
     {
         CmdPushPull(character);
     }
+
     void OpenDoor(GameObject door)
     {
         CmdDoor(door);
@@ -51,15 +57,17 @@ public class ObjectMoveNetworkScript : NetworkBehaviour {
     {
         CmdEnable(item);
     }
+
     void colenable(GameObject item)
     {
         CmdEnablecol(item);
     }
+
     void Moveit(GameObject item)
     {
-        Debug.Log("IM IN BITCH" + item.name);
         CmdAnimate(item);
     }
+
     [Command]
     void CmdPull(GameObject box)
     {
@@ -107,29 +115,40 @@ public class ObjectMoveNetworkScript : NetworkBehaviour {
             audioclip.Play();
         }
     }
+
     [Command]
     void CmdEnable(GameObject enabler)
     {
         enabler.SetActive(true);
     }
+
     [Command]
     void CmdEnablecol(GameObject enabler)
     {
         enabler.GetComponent<BoxCollider>().enabled = true;
     }
+
     [Command]
     void CmdAnimate(GameObject animator)
     {
         animator.GetComponent<Animator>().SetBool("open", true);
     }
+
     [Command]
     void CmdWalk(GameObject character)
     {
         character.GetComponent<Animator>().SetBool("iswalking", true);
     }
+
     [Command]
     void CmdPushPull(GameObject character)
     {
-        character.transform.Find("HumanCharacterModel_painted").gameObject.GetComponent<Animator>().SetBool("ispushing", true);
+        character.transform.Find("HumanCharacter_Idle").gameObject.GetComponent<Animator>().SetBool("ispushing", true);
+    }
+
+    [Command]
+    void CmdStopWalk(GameObject character)
+    {
+        character.GetComponent<Animator>().SetBool("iswalking", false);
     }
 }

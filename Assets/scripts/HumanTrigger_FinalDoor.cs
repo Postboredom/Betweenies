@@ -37,6 +37,6 @@ public class HumanTrigger_FinalDoor : NetworkBehaviour
 
     private void doorOpen()
     {
-        door.SendMessage("humanOpen");
+        transform.root.gameObject.SendMessage("humanOpen");
     }
 }

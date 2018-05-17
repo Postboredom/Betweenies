@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public class control_panel_controller : NetworkBehaviour {
 
-    public GameObject[] bats;
+    //public GameObject[] bats;
     public GameObject toActivate;
 
     private int batsInserted;
@@ -13,7 +13,7 @@ public class control_panel_controller : NetworkBehaviour {
     private Collider interaction;
     private GameObject dogPlayer;
 
-    private List<Transform> batteryPos;
+    public List<Transform> batteryPos;
 
 
 	// Use this for initialization

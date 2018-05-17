@@ -37,6 +37,6 @@ public class DogTrigger_FinalDoor : NetworkBehaviour
 
     private void doorOpen()
     {
-        door.SendMessage("dogOpen");
+        transform.root.gameObject.SendMessage("dogOpen");
     }
 }
